@@ -4,6 +4,8 @@ import {
     Route as ReactDOMRoute,
 } from 'react-router-dom';
 
+import Template from '../pages/Template';
+
 interface RouteProps extends ReactDOMRouteProps
 {
     component: React.ComponentType;
@@ -14,7 +16,15 @@ const Route: React.FC<RouteProps> = ({
     ...rest
 }) => {
     return(
-        <ReactDOMRoute component={Component} {...rest}/>
+        <ReactDOMRoute
+        {...rest}
+        render={() => {
+            return (
+                <Template>
+                    <Component />
+                </Template>
+            );
+        }}/>
     );
 }
 

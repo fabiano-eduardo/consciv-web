@@ -9,12 +9,15 @@ export default createGlobalStyle`
     }
 
     :root {
-        --color-green-main: #dbdbdb;
+        // Colors
+        --color-green-main: #175641;
+
+        // Sizes
+        --header-height: 76px;
+        --header-height-mobile: 40px;
     }
 
     body {
-        background: #312E38;
-        color: #FFF;
         -webkit-font-smoothing: antialiased;
     }
 `;
