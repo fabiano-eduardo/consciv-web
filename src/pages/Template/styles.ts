@@ -10,23 +10,25 @@ export const Header = styled.header`
     padding: 0px 20px;
     display: flex;
     align-items: center;
-
     background: var(--color-green-main);
 
     div {
-        width: calc(var(--header-height) - 16px);
-        height: calc(var(--header-height) - 16px);
-        margin-left: auto;
         display: flex;
         justify-content: center;
         align-items: center;
-        background: #fff;
-        border: 1px solid #ccc;
-        border-radius: 50%;
         cursor: pointer;
     }
 
-    @media(max-width: 777px) {
+    div.profile {
+        width: calc(var(--header-height) - 16px);
+        height: calc(var(--header-height) - 16px);
+        margin-left: auto;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+    }
+
+    @media(max-width: calc(700px + ${process.env.SIZE_TO_ADD})) {
         display: none;
     }
 `;
